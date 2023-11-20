@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://blr8kwkvpjhbj"]
+
+[ext_resource type="PackedScene" uid="uid://cxi0j3ifsr7ll" path="res://prefabs/Grids/4by4.tscn" id="1_smi11"]
+[ext_resource type="PackedScene" uid="uid://qrexlkkjhdvq" path="res://prefabs/Shapes/T_Left.tscn" id="2_p0iuv"]
+[ext_resource type="PackedScene" uid="uid://btde4ag4nljl6" path="res://prefabs/Scalers/scalerLeft.tscn" id="3_afsr0"]
+[ext_resource type="PackedScene" uid="uid://cuye6wwodgymr" path="res://prefabs/Shapes/Corner_DownLeft.tscn" id="4_s82aq"]
+[ext_resource type="PackedScene" uid="uid://b1p3xmdlu3j08" path="res://prefabs/Scalers/scalerRight.tscn" id="5_e2dko"]
+[ext_resource type="PackedScene" uid="uid://6n68apa4ccxy" path="res://prefabs/Shapes/LV_DownLeft.tscn" id="6_g6io7"]
+
+[node name="7" type="Node2D"]
+
+[node name="Grid_Manager" parent="." instance=ExtResource("1_smi11")]
+
+[node name="RigidBody2D" parent="." instance=ExtResource("2_p0iuv")]
+position = Vector2(160, 55)
+colorSelect = 1
+
+[node name="Scaler" parent="." instance=ExtResource("3_afsr0")]
+position = Vector2(-135, -30)
+
+[node name="RigidBody2D2" parent="." instance=ExtResource("4_s82aq")]
+position = Vector2(127, -53)
+
+[node name="Scaler2" parent="." instance=ExtResource("5_e2dko")]
+position = Vector2(-135, 27)
+
+[node name="RigidBody2D3" parent="." instance=ExtResource("6_g6io7")]
+position = Vector2(157, -14)

@@ -1,0 +1,106 @@
+[gd_scene load_steps=6 format=3 uid="uid://dml2i8y41cdyp"]
+
+[ext_resource type="Script" path="res://scripts/grid.gd" id="1_jn2ns"]
+[ext_resource type="PackedScene" uid="uid://dltn0bs4xvcuq" path="res://prefabs/panel.tscn" id="2_8ghej"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kefda"]
+size = Vector2(148, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqxqi"]
+size = Vector2(162.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ujb7q"]
+size = Vector2(27, 29)
+
+[node name="Grid_Manager" type="Area2D"]
+script = ExtResource("1_jn2ns")
+
+[node name="panel" parent="." instance=ExtResource("2_8ghej")]
+position = Vector2(-30, 15)
+
+[node name="panel2" parent="." instance=ExtResource("2_8ghej")]
+position = Vector2(0, 15)
+
+[node name="panel3" parent="." instance=ExtResource("2_8ghej")]
+position = Vector2(-60, 15)
+
+[node name="panel4" parent="." instance=ExtResource("2_8ghej")]
+position = Vector2(-30, -15)
+
+[node name="panel5" parent="." instance=ExtResource("2_8ghej")]
+position = Vector2(0, -15)
+
+[node name="panel6" parent="." instance=ExtResource("2_8ghej")]
+position = Vector2(-60, -15)
+
+[node name="panel7" parent="." instance=ExtResource("2_8ghej")]
+position = Vector2(-30, 45)
+
+[node name="panel8" parent="." instance=ExtResource("2_8ghej")]
+position = Vector2(0, 45)
+
+[node name="panel10" parent="." instance=ExtResource("2_8ghej")]
+position = Vector2(-30, -45)
+
+[node name="panel11" parent="." instance=ExtResource("2_8ghej")]
+position = Vector2(0, -45)
+
+[node name="panel13" parent="." instance=ExtResource("2_8ghej")]
+position = Vector2(30, 15)
+
+[node name="panel14" parent="." instance=ExtResource("2_8ghej")]
+position = Vector2(30, -15)
+
+[node name="panel15" parent="." instance=ExtResource("2_8ghej")]
+position = Vector2(30, 45)
+
+[node name="panel16" parent="." instance=ExtResource("2_8ghej")]
+position = Vector2(30, -45)
+
+[node name="panel17" parent="." instance=ExtResource("2_8ghej")]
+position = Vector2(60, 15)
+
+[node name="panel18" parent="." instance=ExtResource("2_8ghej")]
+position = Vector2(60, -15)
+
+[node name="Border" type="Node2D" parent="."]
+position = Vector2(0, -15)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Border"]
+position = Vector2(0, -56)
+lock_rotation = true
+freeze = true
+freeze_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/RigidBody2D"]
+shape = SubResource("RectangleShape2D_kefda")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Border/RigidBody2D"]
+position = Vector2(0, 142)
+shape = SubResource("RectangleShape2D_kefda")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Border/RigidBody2D"]
+position = Vector2(-86, 71)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_uqxqi")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Border/RigidBody2D"]
+position = Vector2(86, 71)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_uqxqi")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Border/RigidBody2D"]
+position = Vector2(-60.5, 25.5)
+shape = SubResource("RectangleShape2D_ujb7q")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Border/RigidBody2D"]
+position = Vector2(60, 117)
+shape = SubResource("RectangleShape2D_ujb7q")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Border/RigidBody2D"]
+position = Vector2(-60, 117)
+shape = SubResource("RectangleShape2D_ujb7q")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Border/RigidBody2D"]
+position = Vector2(60, 25)
+shape = SubResource("RectangleShape2D_ujb7q")

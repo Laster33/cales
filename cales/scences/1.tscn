@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://ck5tc57s6ajs1"]
+
+[ext_resource type="PackedScene" uid="uid://u4ee7kt0j4hi" path="res://prefabs/Grids/3by3.tscn" id="1_ybtat"]
+[ext_resource type="PackedScene" uid="uid://dfhv631d5510g" path="res://prefabs/Scalers/scalerUp.tscn" id="2_a504x"]
+[ext_resource type="PackedScene" uid="uid://b1p3xmdlu3j08" path="res://prefabs/Scalers/scalerRight.tscn" id="3_cua1g"]
+[ext_resource type="PackedScene" uid="uid://cxa65b03s5hob" path="res://prefabs/Shapes/Cube.tscn" id="4_y6ped"]
+
+[node name="1" type="Node2D"]
+
+[node name="Grid_Manager" parent="." instance=ExtResource("1_ybtat")]
+
+[node name="Scaler" parent="." instance=ExtResource("2_a504x")]
+position = Vector2(-141, -25)
+
+[node name="Scaler2" parent="." instance=ExtResource("3_cua1g")]
+position = Vector2(-140, 24)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("4_y6ped")]
+position = Vector2(143, -16)

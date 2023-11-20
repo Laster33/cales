@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dltn0bs4xvcuq"]
+
+[ext_resource type="Texture2D" uid="uid://b2of4pofe764y" path="res://sprites/panel.png" id="1_fwhik"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nvbvr"]
+radius = 0.0
+
+[node name="panel" type="CollisionShape2D"]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_nvbvr")
+
+[node name="Panel" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_fwhik")

@@ -1,0 +1,46 @@
+[gd_scene load_steps=11 format=3 uid="uid://coipv236ikjfa"]
+
+[ext_resource type="PackedScene" uid="uid://jqrbyglyghtk" path="res://prefabs/Grids/Cross.tscn" id="1_5mwft"]
+[ext_resource type="PackedScene" uid="uid://dfhv631d5510g" path="res://prefabs/Scalers/scalerUp.tscn" id="2_y8w0k"]
+[ext_resource type="PackedScene" uid="uid://dy0qf8cn2b2n7" path="res://prefabs/Scalers/scalerDown.tscn" id="3_fk5rq"]
+[ext_resource type="PackedScene" uid="uid://btde4ag4nljl6" path="res://prefabs/Scalers/scalerLeft.tscn" id="4_bicby"]
+[ext_resource type="PackedScene" uid="uid://cxa65b03s5hob" path="res://prefabs/Shapes/Cube.tscn" id="5_kv0ho"]
+[ext_resource type="PackedScene" uid="uid://dga0g17qdihye" path="res://prefabs/Shapes/LV_DownRight.tscn" id="6_8ovym"]
+[ext_resource type="PackedScene" uid="uid://dr5b3uh6fbp2b" path="res://prefabs/Shapes/Column.tscn" id="7_rjbm6"]
+[ext_resource type="PackedScene" uid="uid://dsccj60qvf2fh" path="res://prefabs/Shapes/L_DownRight.tscn" id="8_3fdv7"]
+[ext_resource type="PackedScene" uid="uid://cuye6wwodgymr" path="res://prefabs/Shapes/Corner_DownLeft.tscn" id="9_jf1xt"]
+[ext_resource type="PackedScene" uid="uid://opl8mvctooir" path="res://prefabs/Shapes/Corner_UpRight.tscn" id="10_sm01d"]
+
+[node name="15" type="Node2D"]
+
+[node name="Grid_Manager" parent="." instance=ExtResource("1_5mwft")]
+
+[node name="Scaler" parent="." instance=ExtResource("2_y8w0k")]
+position = Vector2(-143, -49)
+
+[node name="Scaler2" parent="." instance=ExtResource("3_fk5rq")]
+position = Vector2(-143, 46)
+
+[node name="Scaler3" parent="." instance=ExtResource("4_bicby")]
+position = Vector2(-147, 0)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("5_kv0ho")]
+position = Vector2(168, -48)
+
+[node name="RigidBody2D2" parent="." instance=ExtResource("6_8ovym")]
+position = Vector2(199, -81)
+
+[node name="RigidBody2D3" parent="." instance=ExtResource("7_rjbm6")]
+position = Vector2(135, -49)
+colorSelect = 4
+
+[node name="RigidBody2D4" parent="." instance=ExtResource("8_3fdv7")]
+position = Vector2(230, 75)
+colorSelect = 3
+
+[node name="RigidBody2D5" parent="." instance=ExtResource("9_jf1xt")]
+position = Vector2(135, 75)
+
+[node name="RigidBody2D6" parent="." instance=ExtResource("10_sm01d")]
+position = Vector2(198, 13)
+colorSelect = 5

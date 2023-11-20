@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://eyxhvehcbin5"]
+
+[ext_resource type="Texture2D" uid="uid://b2of4pofe764y" path="res://sprites/panel.png" id="1_k4me8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_itan2"]
+size = Vector2(28.75, 28.75)
+
+[node name="Cube" type="CollisionShape2D"]
+shape = SubResource("RectangleShape2D_itan2")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 30)
+
+[node name="Panel" type="Sprite2D" parent="."]
+modulate = Color(0.341176, 0.337255, 0.313726, 1)
+texture = ExtResource("1_k4me8")

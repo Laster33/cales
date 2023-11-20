@@ -1,0 +1,109 @@
+[gd_scene load_steps=5 format=3 uid="uid://u4ee7kt0j4hi"]
+
+[ext_resource type="Script" path="res://scripts/grid.gd" id="1_ge3eu"]
+[ext_resource type="PackedScene" uid="uid://dltn0bs4xvcuq" path="res://prefabs/panel.tscn" id="2_1m7jo"]
+[ext_resource type="Texture2D" uid="uid://b2of4pofe764y" path="res://sprites/panel.png" id="3_b8egb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1ume"]
+size = Vector2(50, 50)
+
+[node name="Grid_Manager" type="Area2D"]
+script = ExtResource("1_ge3eu")
+
+[node name="panel" parent="." instance=ExtResource("2_1m7jo")]
+
+[node name="panel2" parent="." instance=ExtResource("2_1m7jo")]
+position = Vector2(30, 0)
+
+[node name="panel3" parent="." instance=ExtResource("2_1m7jo")]
+position = Vector2(-30, 0)
+
+[node name="panel4" parent="." instance=ExtResource("2_1m7jo")]
+position = Vector2(0, -30)
+
+[node name="panel5" parent="." instance=ExtResource("2_1m7jo")]
+position = Vector2(30, -30)
+
+[node name="panel6" parent="." instance=ExtResource("2_1m7jo")]
+position = Vector2(-30, -30)
+
+[node name="panel7" parent="." instance=ExtResource("2_1m7jo")]
+position = Vector2(0, 30)
+
+[node name="panel8" parent="." instance=ExtResource("2_1m7jo")]
+position = Vector2(30, 30)
+
+[node name="panel9" parent="." instance=ExtResource("2_1m7jo")]
+position = Vector2(-30, 30)
+
+[node name="Border" type="Node2D" parent="."]
+
+[node name="border" type="RigidBody2D" parent="Border"]
+position = Vector2(-60, 0)
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+freeze_mode = 1
+
+[node name="shape" type="CollisionShape2D" parent="Border/border"]
+scale = Vector2(0.5, 2.5)
+shape = SubResource("RectangleShape2D_g1ume")
+
+[node name="Panel" type="Sprite2D" parent="Border/border/shape"]
+visible = false
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("3_b8egb")
+
+[node name="border2" type="RigidBody2D" parent="Border"]
+position = Vector2(60, 0)
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+freeze_mode = 1
+
+[node name="shape" type="CollisionShape2D" parent="Border/border2"]
+scale = Vector2(0.5, 2.5)
+shape = SubResource("RectangleShape2D_g1ume")
+
+[node name="Panel" type="Sprite2D" parent="Border/border2/shape"]
+visible = false
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("3_b8egb")
+
+[node name="border3" type="RigidBody2D" parent="Border"]
+position = Vector2(0, 60)
+rotation = 1.5708
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+freeze_mode = 1
+
+[node name="shape" type="CollisionShape2D" parent="Border/border3"]
+scale = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_g1ume")
+
+[node name="Panel" type="Sprite2D" parent="Border/border3/shape"]
+visible = false
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("3_b8egb")
+
+[node name="border4" type="RigidBody2D" parent="Border"]
+position = Vector2(0, -60)
+rotation = 1.5708
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+freeze_mode = 1
+
+[node name="shape" type="CollisionShape2D" parent="Border/border4"]
+scale = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_g1ume")
+
+[node name="Panel" type="Sprite2D" parent="Border/border4/shape"]
+visible = false
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("3_b8egb")

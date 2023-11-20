@@ -1,0 +1,91 @@
+[gd_scene load_steps=9 format=3 uid="uid://djlqi4iqthg03"]
+
+[ext_resource type="Script" path="res://scripts/manager.gd" id="1_drbt4"]
+[ext_resource type="Texture2D" uid="uid://ra31e27kk02k" path="res://UI/Resume.png" id="1_gu1at"]
+[ext_resource type="Texture2D" uid="uid://borxou6nibgw3" path="res://UI/ResumeClick.png" id="2_ivyxv"]
+[ext_resource type="Texture2D" uid="uid://qa46j1iox52e" path="res://UI/ResumeHover.png" id="3_tq5vg"]
+[ext_resource type="Texture2D" uid="uid://c3k7qwt0ugdgt" path="res://UI/Restart.png" id="4_tscty"]
+[ext_resource type="Texture2D" uid="uid://b4lxw1omy26ow" path="res://UI/RestartClick.png" id="5_nslo7"]
+[ext_resource type="Texture2D" uid="uid://pupefauv6fxw" path="res://UI/RestartHover.png" id="6_mn04i"]
+[ext_resource type="AudioStream" uid="uid://bn4dxkjen6mcd" path="res://audio/success.wav" id="8_rw6es"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_drbt4")
+levelCount = 16
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Level" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -17.0
+offset_top = -142.0
+offset_right = 97.0
+offset_bottom = -2.0
+scale = Vector2(0.3, 0.3)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 32
+theme_override_font_sizes/font_size = 84
+text = "4"
+horizontal_alignment = 1
+
+[node name="Next" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = -136.0
+offset_right = 280.0
+offset_bottom = 120.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("1_gu1at")
+texture_pressed = ExtResource("2_ivyxv")
+texture_hover = ExtResource("3_tq5vg")
+
+[node name="Back" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -111.0
+offset_right = 232.0
+offset_bottom = 145.0
+rotation = 3.14159
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("1_gu1at")
+texture_pressed = ExtResource("2_ivyxv")
+texture_hover = ExtResource("3_tq5vg")
+
+[node name="Restart" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = -143.0
+offset_right = 448.0
+offset_bottom = 113.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("4_tscty")
+texture_pressed = ExtResource("5_nslo7")
+texture_hover = ExtResource("6_mn04i")
+
+[node name="Completed" type="Label" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = -44.0
+offset_top = -108.0
+offset_right = 396.0
+offset_bottom = 32.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/font_size = 84
+text = "Completed"
+horizontal_alignment = 1
+
+[node name="Audio" type="AudioStreamPlayer2D" parent="Control"]
+stream = ExtResource("8_rw6es")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[connection signal="button_down" from="Control/Next" to="." method="_on_next_button_down"]
+[connection signal="button_down" from="Control/Back" to="." method="_on_back_button_down"]
+[connection signal="button_down" from="Control/Restart" to="." method="_on_restart_button_down"]

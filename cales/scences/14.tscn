@@ -1,0 +1,36 @@
+[gd_scene load_steps=9 format=3 uid="uid://b01tph5e8nbeh"]
+
+[ext_resource type="PackedScene" uid="uid://8ebxjrks1kxe" path="res://prefabs/Grids/5by5.tscn" id="1_57kja"]
+[ext_resource type="PackedScene" uid="uid://dy0qf8cn2b2n7" path="res://prefabs/Scalers/scalerDown.tscn" id="2_j1mj4"]
+[ext_resource type="PackedScene" uid="uid://b1p3xmdlu3j08" path="res://prefabs/Scalers/scalerRight.tscn" id="3_sc1s1"]
+[ext_resource type="PackedScene" uid="uid://dpt0m6tis8urg" path="res://prefabs/Shapes/T_Down.tscn" id="4_vp11k"]
+[ext_resource type="PackedScene" uid="uid://oqp8dxlrl2iy" path="res://prefabs/Shapes/Z_Vert.tscn" id="5_75gca"]
+[ext_resource type="PackedScene" uid="uid://dsccj60qvf2fh" path="res://prefabs/Shapes/L_DownRight.tscn" id="6_anq5l"]
+[ext_resource type="PackedScene" uid="uid://dr5b3uh6fbp2b" path="res://prefabs/Shapes/Column.tscn" id="7_hpe67"]
+[ext_resource type="PackedScene" uid="uid://cxa65b03s5hob" path="res://prefabs/Shapes/Cube.tscn" id="8_0isg5"]
+
+[node name="14" type="Node2D"]
+
+[node name="Grid_Manager" parent="." instance=ExtResource("1_57kja")]
+
+[node name="Scaler" parent="." instance=ExtResource("2_j1mj4")]
+position = Vector2(-135, -19)
+
+[node name="Scaler2" parent="." instance=ExtResource("3_sc1s1")]
+position = Vector2(-134, 23)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("4_vp11k")]
+position = Vector2(150, -63)
+
+[node name="RigidBody2D2" parent="." instance=ExtResource("5_75gca")]
+position = Vector2(183, -30)
+
+[node name="RigidBody2D3" parent="." instance=ExtResource("6_anq5l")]
+position = Vector2(150, 61)
+
+[node name="RigidBody2D4" parent="." instance=ExtResource("7_hpe67")]
+position = Vector2(118, -31)
+colorSelect = 2
+
+[node name="RigidBody2D5" parent="." instance=ExtResource("8_0isg5")]
+position = Vector2(184, 33)

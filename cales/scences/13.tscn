@@ -1,0 +1,41 @@
+[gd_scene load_steps=10 format=3 uid="uid://ddrvfei0eq612"]
+
+[ext_resource type="PackedScene" uid="uid://8ebxjrks1kxe" path="res://prefabs/Grids/5by5.tscn" id="1_a4ype"]
+[ext_resource type="PackedScene" uid="uid://b1p3xmdlu3j08" path="res://prefabs/Scalers/scalerRight.tscn" id="2_i3ms6"]
+[ext_resource type="PackedScene" uid="uid://btde4ag4nljl6" path="res://prefabs/Scalers/scalerLeft.tscn" id="3_dev8s"]
+[ext_resource type="PackedScene" uid="uid://dfhv631d5510g" path="res://prefabs/Scalers/scalerUp.tscn" id="4_3tkus"]
+[ext_resource type="PackedScene" uid="uid://do0clk7poqc2q" path="res://prefabs/Shapes/T_Right.tscn" id="5_6fq7n"]
+[ext_resource type="PackedScene" uid="uid://b74oa31bt7jwu" path="res://prefabs/Shapes/Row.tscn" id="6_rmwbe"]
+[ext_resource type="PackedScene" uid="uid://cxa65b03s5hob" path="res://prefabs/Shapes/Cube.tscn" id="7_parn5"]
+[ext_resource type="PackedScene" uid="uid://dr5b3uh6fbp2b" path="res://prefabs/Shapes/Column.tscn" id="8_f6uxj"]
+[ext_resource type="PackedScene" uid="uid://dga0g17qdihye" path="res://prefabs/Shapes/LV_DownRight.tscn" id="9_qmnsl"]
+
+[node name="13" type="Node2D"]
+
+[node name="Grid_Manager" parent="." instance=ExtResource("1_a4ype")]
+
+[node name="Scaler" parent="." instance=ExtResource("2_i3ms6")]
+position = Vector2(-130, -41)
+
+[node name="Scaler2" parent="." instance=ExtResource("3_dev8s")]
+position = Vector2(-130, 41)
+
+[node name="Scaler3" parent="." instance=ExtResource("4_3tkus")]
+position = Vector2(-131, 1)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("5_6fq7n")]
+position = Vector2(118, 17)
+
+[node name="RigidBody2D2" parent="." instance=ExtResource("6_rmwbe")]
+position = Vector2(154, 51)
+colorSelect = 4
+
+[node name="RigidBody2D3" parent="." instance=ExtResource("7_parn5")]
+position = Vector2(183, -13)
+
+[node name="RigidBody2D4" parent="." instance=ExtResource("8_f6uxj")]
+position = Vector2(150, -80)
+colorSelect = 2
+
+[node name="RigidBody2D5" parent="." instance=ExtResource("9_qmnsl")]
+position = Vector2(215, -47)

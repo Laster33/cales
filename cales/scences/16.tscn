@@ -1,0 +1,43 @@
+[gd_scene load_steps=10 format=3 uid="uid://vl7t3n8myg7i"]
+
+[ext_resource type="PackedScene" uid="uid://jqrbyglyghtk" path="res://prefabs/Grids/Cross.tscn" id="1_120xq"]
+[ext_resource type="PackedScene" uid="uid://dfhv631d5510g" path="res://prefabs/Scalers/scalerUp.tscn" id="2_2ytv2"]
+[ext_resource type="PackedScene" uid="uid://b1p3xmdlu3j08" path="res://prefabs/Scalers/scalerRight.tscn" id="3_t8hk2"]
+[ext_resource type="PackedScene" uid="uid://opl8mvctooir" path="res://prefabs/Shapes/Corner_UpRight.tscn" id="4_0ejib"]
+[ext_resource type="PackedScene" uid="uid://dpt0m6tis8urg" path="res://prefabs/Shapes/T_Down.tscn" id="5_kapvl"]
+[ext_resource type="PackedScene" uid="uid://b74oa31bt7jwu" path="res://prefabs/Shapes/Row.tscn" id="6_k61uc"]
+[ext_resource type="PackedScene" uid="uid://wgxxryb3iub4" path="res://prefabs/Shapes/L_DownLeft.tscn" id="7_hjdud"]
+[ext_resource type="PackedScene" uid="uid://se18rkkwqow0" path="res://prefabs/Shapes/Z_Horz.tscn" id="8_s00s3"]
+[ext_resource type="PackedScene" uid="uid://6n68apa4ccxy" path="res://prefabs/Shapes/LV_DownLeft.tscn" id="9_eraox"]
+
+[node name="16" type="Node2D"]
+
+[node name="Grid_Manager" parent="." instance=ExtResource("1_120xq")]
+
+[node name="Scaler" parent="." instance=ExtResource("2_2ytv2")]
+position = Vector2(-145, 43)
+
+[node name="Scaler2" parent="." instance=ExtResource("2_2ytv2")]
+position = Vector2(-146, -45)
+
+[node name="Scaler3" parent="." instance=ExtResource("3_t8hk2")]
+position = Vector2(-145, 1)
+
+[node name="RigidBody2D2" parent="." instance=ExtResource("4_0ejib")]
+position = Vector2(223, 15)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("5_kapvl")]
+position = Vector2(161, -16)
+
+[node name="RigidBody2D3" parent="." instance=ExtResource("6_k61uc")]
+position = Vector2(162, -47)
+
+[node name="RigidBody2D4" parent="." instance=ExtResource("7_hjdud")]
+position = Vector2(130, 77)
+
+[node name="RigidBody2D5" parent="." instance=ExtResource("8_s00s3")]
+position = Vector2(192, 76)
+
+[node name="RigidBody2D6" parent="." instance=ExtResource("9_eraox")]
+position = Vector2(161, -78)
+colorSelect = 5
